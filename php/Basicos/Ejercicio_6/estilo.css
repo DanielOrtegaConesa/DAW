@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+    background-color: #FFEAEB;
+    color:#403838;
+}
+
+.top {
+
+    /*Flex*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.menu {
+    background-color: #BFA8A9;
+    padding: 10px;
+
+    /*Flex*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.menu form {
+    display: inline;
+
+}
+
+.menu form input {
+    font-size: 20px;
+}
+
+.principal {
+    font-size: 20px;
+    margin-top: 20px;
+    /*flex*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+th{
+    background-color: #BFBFBF;
+}
+.par td{
+    background-color: #FFFFFF;
+}
+.impar td{
+    background-color: #E5E5E5;
+}

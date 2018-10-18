@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Apuntes</title>
+    <meta name="description" content="Mi pagina">
+    <meta name="author" content="Dani">
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <script src="codigo.js"></script>
+</head>
+<body>
+<script>
+    /*
+    Realizar una pequeña aplicación en JavaScript que nos pida 25 palabras y nos permita simular
+    el siguiente juego:
+
+    • El ordenador selecciona aleatoriamente una palabra de las introducidas y a
+        continuación el usuario intentará adivinar dicha palabra, letra a letra, permitiéndose
+        un máximo de ocho fallos.
+
+    • Cada jugada o letra de adivinar una letra comenzará con un sorteo del valor de la
+        jugada (número aleatorio de puntos entre 1000 y 10000) así como la presentación
+        al usuario de la situación actual del juego (letras y posiciones adivinadas, total de
+        puntos, total de fallos).
+
+    • Si la letra introducida por el usuario en una jugada se encuentra una o más veces
+        en la palabra que se intenta adivinar, el total de puntos se incrementa en el valor de
+        la jugada multiplicado por el número de veces que aparece la letra adivinada.
+
+    • Una vez finalizada la jugada se preguntará al usuario si queremos continuar
+        jugando o no, en caso de querer seguir jugando se le preguntará si continuamos
+        con las mismas palabras o quiere introducir otras.
+
+    • NOTAS IMPORTANTE: No se pueden utilizar Arrays.
+     */
+    alert("A continuacion se te pediran 25 palabras, tendaras que adivinar cual he escogido, es un juego similar al ahoracado, puedes dejar palabras sin rellenar para que te sea mas facil");
+    var p1 = prompt("Introduce la palabra 1");
+    var p2 = prompt("Introduce la palabra 2");
+    var p3 = prompt("Introduce la palabra 3");
+    var p4 = prompt("Introduce la palabra 4");
+    var p5 = prompt("Introduce la palabra 5");
+    var p6 = prompt("Introduce la palabra 6");
+    var p7 = prompt("Introduce la palabra 7");
+    var p8 = prompt("Introduce la palabra 8");
+    var p9 = prompt("Introduce la palabra 9");
+    var p10 = prompt("Introduce la palabra 10");
+    var p11 = prompt("Introduce la palabra 11");
+    var p12 = prompt("Introduce la palabra 12");
+    var p13 = prompt("Introduce la palabra 13");
+    var p14 = prompt("Introduce la palabra 14");
+    var p15 = prompt("Introduce la palabra 15");
+    var p16 = prompt("Introduce la palabra 16");
+    var p17 = prompt("Introduce la palabra 17");
+    var p18 = prompt("Introduce la palabra 18");
+    var p19 = prompt("Introduce la palabra 19");
+    var p20 = prompt("Introduce la palabra 20");
+    var p21 = prompt("Introduce la palabra 21");
+    var p22 = prompt("Introduce la palabra 22");
+    var p23 = prompt("Introduce la palabra 23");
+    var p24 = prompt("Introduce la palabra 24");
+    var p25 = prompt("Introduce la palabra 25");
+    var seguir = true;
+    do {
+        /**************************************************************************************************
+
+
+         Por comodidad me he echo esto, y lo he dejado porque a la hora de usarlo debe ser menos tedioso
+         He usado la siguiente pagina para las palabras: http://www.palabrasque.com/palabra-aleatoria.php
+
+
+         ********************************************************************************************/
+        /*
+        var p1 = "cuenca";
+        var p2 = "alicante";
+        var p3 = "Automovil";
+        var p4 = "Almacen";
+        var p5 = "Mecanica";
+        var p6 = "Foto";
+        var p7 = "Jubilado";
+        var p8 = "Aburrir";
+        var p9 = "Cebolla";
+        var p10 = "Facultad";
+
+        var p11 = "Inmortal";
+        var p12 = "Saco";
+        var p13 = "Rogar";
+        var p14 = "Imantada";
+        var p15 = "Flamenco";
+        var p16 = "Campanario";
+        var p17 = "Afecto";
+        var p18 = "Relampaguear";
+        var p19 = "Arboles";
+        var p20 = "Abanico";
+
+        var p21 = "Croissant";
+        var p22 = "Carretilla";
+        var p23 = "Ejercicio";
+        var p24 = "Ladrillos";
+        var p25 = "Escuela";
+*/
+
+        var cambiar = prompt("¿Quieres cambiar las palabras? Introduce 'SI' para cambiarlas");
+        cambiar = cambiar.toUpperCase();
+        if (cambiar == "SI") {
+            p1 = prompt("Introduce la palabra 1");
+            p2 = prompt("Introduce la palabra 2");
+            p3 = prompt("Introduce la palabra 3");
+            p4 = prompt("Introduce la palabra 4");
+            p5 = prompt("Introduce la palabra 5");
+            p6 = prompt("Introduce la palabra 6");
+            p7 = prompt("Introduce la palabra 7");
+            p8 = prompt("Introduce la palabra 8");
+            p9 = prompt("Introduce la palabra 9");
+            p10 = prompt("Introduce la palabra 10");
+            p11 = prompt("Introduce la palabra 11");
+            p12 = prompt("Introduce la palabra 12");
+            p13 = prompt("Introduce la palabra 13");
+            p14 = prompt("Introduce la palabra 14");
+            p15 = prompt("Introduce la palabra 15");
+            p16 = prompt("Introduce la palabra 16");
+            p17 = prompt("Introduce la palabra 17");
+            p18 = prompt("Introduce la palabra 18");
+            p19 = prompt("Introduce la palabra 19");
+            p20 = prompt("Introduce la palabra 20");
+            p21 = prompt("Introduce la palabra 21");
+            p22 = prompt("Introduce la palabra 22");
+            p23 = prompt("Introduce la palabra 23");
+            p24 = prompt("Introduce la palabra 24");
+            p25 = prompt("Introduce la palabra 25");
+        }
+
+        var palabra;
+        do {
+            palabra = seleccionavariable(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16, p17, p18, p19, p20, p21, p22, p23, p24, p25);
+        } while (palabra == "");
+        window.alert("La palabra tiene " + palabra.length + " letras ");
+
+        var letrasquetiene = "?";// letras que se han comprobado que SI contiene la palabra elegida
+        var probadas = ""; // TODAS las letras probadas
+
+        var fin = false; // Control de que se debe o no hacer otra partida
+        var errores = 0; // cantidad de errores
+        var puntuacion = 0; // puntuacion total
+
+        do {
+            var puntos = aleatorio(1000, 10000); // puntuacion a sumar por letra
+            var contiene = true; // usada para el control de que la palabra contiene la letra
+            var total = ""; // Contenido a mostrar mientras se adivina
+            var letra = ""; // letra introducida por el usuario
+            do {
+                letra = prompt("introduce un caracter:");
+                letra = letra.toUpperCase();
+                if (probadas.indexOf(letra) != (-1)) {
+                    alert("Letra no valida, las letras que ya has usado son: " + probadas);
+                }
+                if (letra.length != 1) {
+                    alert("Las letras de una en una, las letras que ya has usado son: " + probadas);
+                }
+            } while ((letra == "") || (probadas.indexOf(letra) != (-1)) || letra.length != 1);
+            probadas += letra + ", ";
+            if (palabra.indexOf(letra) == -1) {
+                errores++;
+            } else {
+                if (letrasquetiene.indexOf(letra) == -1) {
+                    letrasquetiene += letra;
+                }
+            }
+            for (var pa = 0; pa < palabra.length; pa++) {// for palabra completa
+                for (var pr = 0; pr < letrasquetiene.length; pr++) {//for letras que SI tiene
+                    if (palabra[pa] == letrasquetiene[pr]) {
+                        total += letrasquetiene[pr];
+                        if (letra == letrasquetiene[pr]) {
+                            puntuacion += Number(puntos);
+                        }
+
+                    } else {
+                        contiene = false;
+                    }
+                }
+            }
+
+
+            if (total.toUpperCase() == palabra.toUpperCase()) {
+                fin = true
+                window.alert("Felicidades, has encontrado la palabra, tienes " + errores + " errores y " + puntuacion + " puntos");
+            } else {
+                window.alert("Progreso: " + total + ", te faltan " + (palabra.length - total.length) + " letras ||| Puntuacion: " + puntuacion + " fallos: " + errores + "||| Has probado las letras: " + probadas);
+            }
+        } while (fin == false) ;
+        var respuesta = prompt("¿Quieres seguir jugando? Introduce 'SI' para seguir");
+        respuesta = respuesta.toUpperCase();
+        if (respuesta != "SI") {
+            seguir = false;
+        }
+    } while (seguir == true);
+
+</script>
+
+</body>
+</html>

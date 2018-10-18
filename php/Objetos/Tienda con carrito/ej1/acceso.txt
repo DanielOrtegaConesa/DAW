@@ -1,0 +1,5 @@
+Todos los usuarios que se pueden logear son:
+usuario: NUMVEND
+pass: TELEFONO
+
+El nombre de usuario que he estado usando es "1" y la contraseña "965758745"

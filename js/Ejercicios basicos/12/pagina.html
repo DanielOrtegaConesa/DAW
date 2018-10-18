@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Apuntes</title>
+    <meta name="description" content="Mi pagina">
+    <meta name="author" content="Dani">
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <script src="codigo.js"></script>
+    <script>
+        function letradni(dni) {
+            var solonumeos = dni.substring(0, 8);
+            var resto = solonumeos % 23;
+            var posibles = "TRWAGMYFPDXBNJZSQVHLCKE";
+            return posibles[resto];
+        }
+    </script>
+</head>
+<body>
+<script>
+    var dni = prompt("Introduce un dni");
+    var continuar = true;
+
+    if(dni.length!=9){
+        continuar=false;
+    }
+
+    if (escadena(dni.substring(0, 8))) {
+        continuar = false;
+    }
+    if (esnumero(dni.substring(8,9))) {
+        continuar = false;
+    }
+
+    if (continuar) {
+
+        if (letradni(dni) == dni[8].toUpperCase()) {
+            window.alert("Dni correcto");
+        } else {
+            window.alert("Letra incorrecta");
+        }
+    } else {
+        window.alert("Formato incorrecto")
+    }
+
+
+</script>
+</body>
+</html>

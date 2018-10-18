@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Apuntes</title>
+    <meta name="description" content="Mi pagina">
+    <meta name="author" content="Dani">
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <script src="codigo.js"></script>
+</head>
+<body>
+<script>
+    var numero = aleatorio(1, 100);
+    var intentos = 0;
+    numero = Math.round(numero);
+    do {
+        var introducido = pidenumero();
+        introducido
+        if (Number(introducido) > numero) {
+            window.alert("El numero que buscas es mas pequeño");
+        }
+        if (Number(introducido) < numero) {
+            window.alert("El numero que buscas es mas grande");
+        }
+        intentos++;
+    } while (numero != Number(introducido));
+
+    document.write("<p>Has acertado, el numero es " + numero + " y lo has conseguido en "+intentos+" intentos </p>");
+
+</script>
+</body>
+</html>

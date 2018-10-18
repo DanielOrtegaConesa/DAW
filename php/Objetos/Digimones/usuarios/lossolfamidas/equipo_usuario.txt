@@ -1,0 +1,3 @@
+Alphamon	25	17	vacuna	3	Sin_Evolucion
+Dobermon	15	14	animal	2	Alphamon
+Chicomon	4	9	vacuna	1	Angemon

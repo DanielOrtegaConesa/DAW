@@ -1,0 +1,121 @@
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    overflow-y: scroll !important;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.container {
+
+}
+
+nav, footer, #btn{
+    background-color: #42a5f5 !important;
+}
+
+
+.bigmodal {
+    width: 90% !important;
+    height: 90% !important;
+}
+
+/* Se le pone al contenedor*/
+.ovweflow-x {
+    overflow-x: auto;
+}
+
+.milogo {
+    width: 80px;
+    align-self: center;
+}
+
+.otroslogos {
+    max-width: 130px;
+}
+
+.flex {
+    display: flex !important;
+}
+
+.h100 {
+    height: 100%;
+}
+
+.imgarticulo {
+    height: 100px;
+}
+
+.imgpersona {
+    width: 100px;
+    height: 100px;
+}
+
+.card {
+    height: 270px;
+!important;
+}
+
+.ocultoimg {
+    height: 130px !important;
+    visibility: hidden;
+}
+
+.oculto {
+    visibility: hidden;
+}
+
+th.header {
+    padding-left: 2em;
+}
+
+.switch label input[type=checkbox]:checked + .lever, .switch label input[type=checkbox]:checked + .lever:after {
+    background-color: #42a5f5 !important;
+}
+
+.waves-circle {
+    margin: 0 !important;
+    width: 4.5em !important;
+    height: 4.5em !important;
+}
+
+.dedito:hover {
+    cursor: pointer;
+}
+
+.dropdown-content li>a, .dropdown-content li>span{
+    color:#42a5f5 !important;
+}
+
+.prefix.active{
+    color:#42a5f5 !important;
+}
+
+/* label color */
+.input-field label {
+    color: black !important;
+}
+/* label focus color */
+.input-field input:focus + label {
+    color: #42a5f5 !important;
+}
+/* label underline focus color */
+.input-field input:focus {
+    border-bottom: 1px solid #42a5f5 !important;
+    box-shadow: 0 1px 0 0 #42a5f5 !important;
+}
+/* valid color */
+.input-field input.valid {
+    border-bottom: 1px solid #000 !important;
+    box-shadow: 0 1px 0 0 #000 !important;
+}
+/* invalid color */
+.input-field input.invalid {
+    border-bottom: 1px solid red !important;
+    box-shadow: 0 1px 0 0 red !important;
+}
+

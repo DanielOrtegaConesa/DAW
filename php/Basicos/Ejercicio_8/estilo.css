@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+    background-image: url("imagenes/fondo.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #FFF;
+}
+
+.contenedor{
+    /*flex*/
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.menu {
+    /*float: left;*/
+    font-size: 28px;
+    font-weight: bold;
+    margin-left: 10px;
+
+    /*Flex*/
+   /* flex-basis: 30%;*/
+}
+.tablero table{
+    border-collapse: collapse;
+}
+
+
+.tablero td {
+    border: 1px solid black;
+    /*float: left;*/
+}
+img{
+    border: 2px solid black;
+}
+
+select{
+    font-size: 30px;
+    background-color: black;
+}

@@ -1,0 +1,3 @@
+Chibimom	5	7	vacuna	1	Angemon
+Kapurimon	5	7	vacuna	1	Magnamon
+Alphamon	25	17	vacuna	3	Sin_Evolucion

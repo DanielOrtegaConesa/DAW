@@ -1,0 +1,6 @@
+Chibimom	5	7	vacuna	1	Angemon
+Alphamon	25	17	vacuna	3	Sin_Evolucion
+Culumon	8	3	vacuna	1	Dobermon
+Kapurimon	5	7	vacuna	1	Magnamon
+Zerimon	5	6	virus	1	Magnamon
+Nyaromon	8	3	animal	1	togemon

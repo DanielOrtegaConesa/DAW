@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+html{
+    width: 100%;
+    height: 100%;
+    background: url("fondo.jpg") no-repeat fixed center;
+    background-size: cover;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+aside{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size:20px;
+    align-items: center;
+}
+body{
+    width: 90%;
+    height: 90%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contenedor {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "opciones main";
+}
+
+aside{
+    grid-area:opciones;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    grid-area: main;
+}
+
+canvas {
+    border: 3px solid black;
+}
+
+@media (max-width: 700px) {
+    .contenedor {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        grid-template-areas: "opciones" "main";
+    }
+}
+#puntuacion{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 30px;
+}

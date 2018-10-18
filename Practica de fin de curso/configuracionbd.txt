@@ -1,0 +1,1 @@
+la configuracion de la base de datos se realiza desde codigo/modelo/funciones_bbdd_pdo.php redefiniendo el valor de las constantes

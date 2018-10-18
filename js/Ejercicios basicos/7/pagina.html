@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Apuntes</title>
+    <meta name="description" content="Mi pagina">
+    <meta name="author" content="Dani">
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <script src="codigo.js"></script>
+</head>
+<body>
+<script>
+    /*
+    Diseñe un programa que pida la fecha de cumpleaños del usuario y calcule la edad del usuario en
+    años.
+
+    Segun interpreto YO con fecha de cumpleaños se refiere a fecha de nacimiento
+    por lo cual, el programa se ara basandose en ese dato
+    */
+
+    do {
+        var Idia = prompt("Introduce dia de nacimiento");
+    } while (Idia > 31 || Idia < 1);
+
+    do {
+        var Imes = prompt("Introduce mes de nacimiento");
+    } while (Imes > 12 || Imes < 1);
+    Imes -= 1; // esto es porque este metodo solo se aceptan meses del 0 al 11
+
+    do {
+        var Ianyo = prompt("Introduce año de nacimiento");
+    } while (Ianyo > 2017 || Ianyo < 1900);
+
+    var fechahoy = new Date();
+    var diahoy = fechahoy.getDate();
+    var meshoy = fechahoy.getMonth();
+    var anyohoy = fechahoy.getFullYear();
+    diahoy *= 1;
+    meshoy *= 1;
+    anyohoy *= 1;
+    var diferencia = anyohoy - Ianyo;
+
+    if (Imes > meshoy) {
+        document.write("<p>" + diferencia );
+    }
+    if (Imes == meshoy) {
+        if (Idia > diahoy) {
+            document.write("<p>" + (diferencia-1));
+        }
+        if (Idia <= diahoy) {
+            document.write("<p>" + (diferencia));
+        }
+    }
+    if (Imes < meshoy) {
+        document.write("<p>" + (diferencia));
+    }
+document.write(" Años</p>");
+// Codigo anterior, lo dejo porque me costo trabajo y lo unico que fallaba eran los años bisiestos
+    /*
+    do {
+        var Idia = prompt("Introduce dia de nacimiento");
+    } while (Idia > 31 || Idia < 1);
+
+    do {
+        var Imes = prompt("Introduce mes de nacimiento");
+    } while (Imes > 12 || Imes < 1);
+    Imes -= 1; // esto es porque este metodo solo se aceptan meses del 0 al 11
+
+    do {
+        var Ianyo = prompt("Introduce año de nacimiento");
+    } while (Ianyo > 2017 || Ianyo < 1900);
+
+    var datos = Ianyo + "-" + Imes + "-" + Idia;
+
+    var Ifecha = new Date(datos);
+    var Idiferencia = Ifecha.getTime();
+
+    var fechahoy = new Date();
+    var diahoy = fechahoy.getDate();
+    var meshoy = fechahoy.getMonth()
+    var anyohoy = fechahoy.getFullYear()
+    var datoshoy = anyohoy + "-" + meshoy + "-" + diahoy;
+
+    fechahoy = new Date(datoshoy);
+    var diferenciahoy = fechahoy.getTime();
+    if (diferenciahoy > Idiferencia) {
+        var resto = diferenciahoy - Idiferencia;
+        document.writeln(resto);
+        resto /= 31536000000;//(1000 * 60 * 60 * 24 * 365);
+        //resto = Math.trunc(resto);
+        if (resto > 0) {
+            document.writeln("Tienes " + resto + " Años"); //Math.floor es para redondear "al suelo" y ceil "al cielo"
+        } else {
+            document.writeln("Tu edad se calcula en meses y/o dias")
+        }
+    } else {
+        document.writeln("Tienes " + resto + " Años"); //Math.floor es para redondear "al suelo" y ceil "al cielo"
+        // alert("Datos erroneos");
+    }*/
+</script>
+</body>
+</html>

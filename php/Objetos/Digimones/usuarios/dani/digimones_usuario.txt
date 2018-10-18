@@ -1,0 +1,10 @@
+Chibimom	5	7	vacuna	1	Angemon
+Chicomon	4	9	vacuna	1	Angemon
+Culumon	8	3	vacuna	1	Dobermon
+Pagumon	2	12	vacuna	1	Sin_Evolucion
+togemon	14	12	planta	2	dukemon
+Tsunomon	1	10	vacuna	1	Sin_Evolucion
+Pabumon	8	4	elemental	1	togemon
+Luminamon	6	3	animal	1	Stingmon
+Tanemon	6	4	vacuna	1	Angemon
+Nyaromon	8	3	animal	1	togemon

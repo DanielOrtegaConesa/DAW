@@ -1,0 +1,163 @@
+* {
+    cursor: url(img/cursor.ico), pointer;
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 50px;
+}
+
+.container {
+    text-align: center;
+}
+
+.errores {
+    color: #bf3400;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.principal {
+    /*flex*/
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.verdigimones {
+    padding: 20px;
+}
+
+.formularioalta {
+    width: 30%;
+}
+
+.navbar-inverse {
+    background-color: #fea65d;
+    color: #1e5b98;
+    font-weight: bold;
+}
+
+#navbar > ul > li > a {
+    color: #1e5b98;
+    font-weight: bold;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #1e5b98;
+    font-weight: bold;
+}
+
+#navbar > ul > li > a:hover {
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.relieve {
+    text-align: left;
+    font-family: Arial Black;
+    font-weight: bold;
+    font-size: 30px;
+    background: #202020;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.4), 0px -1px 1px rgba(0, 0, 0, 0.3);
+}
+
+/****** VERSUS ***********/
+
+.vs {
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.arriba {
+    align-self: flex-start;
+}
+
+.abajo {
+    align-self: flex-end;
+}
+.textvs{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    overflow: auto;
+    justify-content: center;
+}
+.resultados > tbody > tr > td{
+height: 200px;
+
+}
+
+/****************************/
+
+.bloque {
+    width: 100%;
+}
+
+.estadisticas {
+    padding-top: 20px;
+    text-align: left;
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+    padding-bottom: 20px;
+}
+
+a, a:hover {
+    cursor: url(img/cursor2.ico), pointer;
+}
+
+input, input:hover {
+    cursor: url(img/cursor2.ico), pointer;
+}
+
+.imagen, .imagenmasbaja {
+    min-width: 200px;
+}
+.imagen{
+    margin-right: 20px;
+}
+.imagenmasbaja {
+    margin-left: 20px;
+    align-self: center;
+}
+
+/******** COLUMNAS DE JUGAR *******/
+.coldobles {
+    display: flex;
+    align-items: center;
+}
+
+.columna1de2, .columna2de2 {
+    width: 50%;
+}
+
+.columna1de2 {
+    border-right: solid 1px black;
+}
+
+.columna2de2 {
+    border-left: solid 1px black;
+}
+
+.columna1de2 > div > table > tbody > tr > td, .columna2de2 > div > table > tbody > tr > td, .tusresultados td{
+    width: 200px;
+    vertical-align: middle;
+}
+.td{
+    vertical-align: middle;
+    height: 120px;
+}
+
+/****************************/
+.vermisdigimon{
+    height: 200px;
+    width: 200px;
+}

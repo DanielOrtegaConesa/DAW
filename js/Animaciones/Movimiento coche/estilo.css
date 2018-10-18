@@ -1,0 +1,170 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("img/bg.jpg");
+    background-repeat: repeat-x;
+    background-size: cover;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 10s;
+    animation-name: moverfondo;
+    overflow: hidden;
+}
+
+@keyframes moverfondo {
+    from {
+        background-position: 0px 0px;
+    }
+    to {
+        background-position: -10000px 0px;
+    }
+}
+
+main > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.imagenmontada {
+    position: absolute;
+    bottom: 12px;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 10s;
+    animation-name: subirbajar;
+}
+
+@keyframes subirbajar {
+    10% {
+        transform: translateY(0vh);
+    }
+    20% {
+        transform: translateY(-15vh);
+    }
+    40% {
+        transform: translateY(0vh);
+    }
+    50% {
+        transform: translateY(-15vh);
+    }
+    70% {
+        transform: translateY(0vh);
+    }
+    80% {
+        transform: translateY(-15vh);
+    }
+
+}
+
+.composicion {
+    position: relative;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 10s;
+    animation-name: movercoche;
+}
+
+@keyframes movercoche {
+    from {
+        transform: translate(-20vw);
+    }
+    to {
+        transform: translate(100vw);
+    }
+}
+
+#coche {
+    transform: scaleX(-1);
+}
+
+#rueda1 {
+    position: absolute;
+    bottom: -6px;
+    right: 24px;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    animation-name: girarrueda;
+}
+
+#rueda2 {
+    position: absolute;
+    bottom: -10px;
+    left: 55px;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    animation-name: girarrueda;
+}
+
+@keyframes girarrueda {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}

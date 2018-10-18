@@ -1,0 +1,39 @@
+html,html>*{
+    background-color: #e8eaf6 !important;
+}
+#datos{
+    padding: 32px 48px 0px 48px;
+    border: 1px solid #EEE;
+}
+.ovweflow-x {
+    overflow-x: auto;
+    overflow-y:hidden;
+}
+
+.dropdown-content li>a, .dropdown-content li>span{
+    color:#42a5f5 !important;
+}
+
+/* label color */
+.input-field label {
+    color: black !important;
+}
+/* label focus color */
+.input-field input:focus + label {
+    color: #42a5f5 !important;
+}
+/* label underline focus color */
+.input-field input:focus {
+    border-bottom: 1px solid #42a5f5 !important;
+    box-shadow: 0 1px 0 0 #42a5f5 !important;
+}
+/* valid color */
+.input-field input.valid {
+    border-bottom: 1px solid #000 !important;
+    box-shadow: 0 1px 0 0 #000 !important;
+}
+/* invalid color */
+.input-field input.invalid {
+    border-bottom: 1px solid red !important;
+    box-shadow: 0 1px 0 0 red !important;
+}

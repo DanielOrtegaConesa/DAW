@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee');
+
+html {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    padding-top: 10px;
+    background-color: #333 !important;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: sans-serif;
+    font-size: 15px;
+    color: #F2F2F2;
+    background-color: #333 !important;
+}
+
+.contenedor {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: "head head" "principal ader" "foot foot";
+}
+
+.contenedor > header, .contenedor > main{
+    border: black solid 2px;
+}
+
+main, footer, aside {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    height: 100px;
+    grid-area: head;
+    background-color: #7DADE8;
+    margin-bottom: 50px;
+}
+
+header > nav {
+    width: 100%
+}
+
+header > nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    text-transform: uppercase;
+}
+
+header > nav > div {
+    background-color: #F2F2F2;
+    padding: 5px;
+    border-radius: 10px;
+    border: solid 1px black;
+
+    font-family: 'Bungee';
+    font-size: 15px;
+}
+
+header > nav > div > a {
+    text-decoration: none;
+    color: #333;
+
+}
+
+nav > * {
+    margin: 10px;
+}
+
+.botonmenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Main */
+
+main {
+    grid-area: principal;
+    color: #333;
+    background-color: #F2F2F2;
+    padding: 20px;
+}
+main .boton{
+    padding: 5px;
+    border-radius: 10px;
+    border: solid 1px black;
+    font-family: 'Bungee';
+    font-size: 15px;
+    margin: 5px;
+}
+main .boton a{
+    text-decoration: none;
+    color: #333;
+}
+
+#comentarios,#comentarios div{
+    width: 100%;
+    color: #7DADE8;
+}
+
+#form > *{
+    width: 100%;
+    display: block;
+}
+
+#form > input,#form > select{
+    margin-bottom: 10px;
+}
+
+table{
+    width: 100%;
+    color: #333;
+    min-width: 200px;
+}
+
+
+/* Aside */
+
+aside {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+aside > * {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+aside.derecha {
+    grid-area: ader;
+}
+
+aside.derecha > img {
+    width: 100%;
+}
+
+aside.izquierda {
+    grid-area: aizq;
+}
+
+aside.izquierda img {
+    width: 100%;
+}
+
+/* Footer */
+
+footer {
+    grid-area: foot;
+    height: 100px;
+    justify-content: space-between;
+}
+
+/* Extras */
+.bloque {
+    width: 100%;
+}
+
+.centro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Media Query */
+@media (max-width: 900px) {
+    .contenedor {
+        width: 90%;
+        display: grid;
+        grid-template-columns: 4fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas: "head" "principal" "foot";
+    }
+    aside{
+        display: none;
+    }
+    header {
+        padding: 0;
+    }
+}

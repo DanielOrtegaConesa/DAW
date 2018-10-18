@@ -1,0 +1,4 @@
+Chibimom	5	7	vacuna	1	Angemon
+Chicomon	4	9	vacuna	1	Angemon
+Culumon	8	3	vacuna	1	Dobermon
+pyocomon	5	6	planta	1	Sin_Evolucion

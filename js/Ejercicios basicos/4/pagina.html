@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Apuntes</title>
+    <meta name="description" content="Mi pagina">
+    <meta name="author" content="Dani">
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <script src="codigo.js"></script>
+</head>
+<body>
+<script>
+    /*
+    *Diseñe un programa que genere números aleatorios en el intervalo de 1 a 1000 hasta obtener un
+    número con cuatro divisores. El programa mostrará un listado como el siguiente:
+    Número Cantidad de Divisores
+    121 3
+    881 2
+    60 12
+    978 8
+    964 6
+    22 4
+    * */
+    do {
+        var divisores = 0;
+        var numero = Math.round(aleatorio(1, 1000));
+        var tope = numero;//((numero / 2) + 1);
+        //alert(tope);
+        for (var c = 0; c <= tope; c++) {
+            if ((Number(numero) % c) == 0) {
+                divisores++;
+                //alert("Es divisor de"+numero+": "+c+" total: "+divisores);
+            }
+        }
+        document.write("<table>");
+        document.writeln("<tr><td>Numero</td><td>Divisores</td></tr>");
+        document.writeln("<tr><td>" + numero + "</td><td>" + divisores + "</td></tr>");
+        document.write("</table>");
+    } while (Number(divisores) != 4);
+
+
+</script>
+</body>
+</html>

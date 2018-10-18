@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> CANVAS </title>
+    <meta name="description" content="Mi pagina">
+    <meta name="author" content="Dani">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <script src="clases/Gusano.js" type="text/javascript"></script>
+    <script src="clases/Piezagusano.js" type="text/javascript"></script>
+    <script src="clases/Mina.js" type="text/javascript"></script>
+    <script src="prefixfree.min.js" type="text/javascript"></script>
+
+</head>
+<body onkeydown="direccion(event);">
+
+<div class="contenedor">
+
+    <aside>
+        <div>
+            <h3>-- Puntuacion --</h3>
+            <div id="puntuacion"></div>
+            <form name="opciones">
+                <h3>-- Ciclico --</h3>
+                <label for="si">Si</label>
+                <input type="radio" name="ciclico" value="si" id="si" onchange="changeciclico()">
+                <br/>
+                <label for="no">No</label>
+                <input type="radio" name="ciclico" value="no" id="no" onchange="changeciclico()" checked>
+
+                <h3>-- Cantidad de Minas --</h3>
+                <input type="range" name="minas" min="1" max="50" step="1" onchange="changerango(),empezar()"
+                       value="25">
+                <div id="valorrange"><p>25</p></div>
+                <input type="button" name="boton" onclick="empezar()" value="Empezar">
+            </form>
+        </div>
+    </aside>
+
+    <main>
+        <canvas id="canvas">
+
+        </canvas>
+    </main>
+
+</div>
+
+<script src="codigo.js"></script>
+</body>
+</html>

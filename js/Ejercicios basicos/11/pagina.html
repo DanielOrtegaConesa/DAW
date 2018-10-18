@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Apuntes</title>
+    <meta name="description" content="Mi pagina">
+    <meta name="author" content="Dani">
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <script src="codigo.js"></script>
+</head>
+<body>
+<script>
+    /*
+    Programa que lea una frase o palabra y que después la imprima carácter a carácter de distintas
+    maneras:
+    1. La cadena original.
+    2. En orden inverso.
+    3. Cambiando los caracteres ‘a’ por un asterisco imprimiendo a su vez las posiciones de dichos
+    cambios en la palabra original.
+    * */
+
+    var frase = prompt("Introduce una frase:");
+    var tfrase = frase.length;
+
+    document.write("<p>Cadena original:</p>");
+    for (var c = 0; c < tfrase; c++) {
+        document.write(frase[c]);
+    }
+
+    document.write("<p>Cadena inversa:</p>");
+    for (var d = tfrase - 1; d >= 0; d--) {
+        //if(typeof(tfrase[d]=="string")) {
+        document.write(frase[d]);
+        //}
+    }
+    // no entiendo porque no funciona: frase = frase.replace("a","*");
+    document.write("<br/><br/>cambiando a por *");
+    var frase2 = "";
+    document.write("<p>");
+    for (var c = 0; c < tfrase; c++) {
+        if (frase[c] != "a") {
+            frase2 += frase[c];
+            document.write(frase2[c]);
+        }else{
+            frase2+="*";
+            document.write(frase2[c]);
+        }
+    }
+    document.write("</p>");
+</script>
+</body>
+</html>

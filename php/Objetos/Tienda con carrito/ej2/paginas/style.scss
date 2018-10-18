@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+$fondoscuro: #343a40 !important;
+$colorprimario: #eb322a !important;
+
+$cfuente: #333 !important;
+$cfuenteclaro: #b9b4bd !important;
+
+html, body {
+  height: 100%;
+}
+
+body {
+  br:first-child {
+    display: none;
+  }
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "head" "contenido" "foot";
+  color: $cfuente;
+}
+
+header {
+  margin-top: 1px;
+  margin-bottom: 30px;
+  padding-bottom: 66px;
+  grid-area: head;
+
+  nav {
+    border-top: 1px solid black !important;
+    border-bottom: 1px solid black !important;
+    background-color: $fondoscuro;
+  }
+
+  .logo {
+    height: 80px;
+  }
+
+}
+
+#nav {
+  grid-area: navegacion;
+  height: 100%;
+  border-right: solid 3px $fondoscuro;
+
+  a, a:hover, a:visited {
+    color: $cfuente;
+    font-size: 1.5em;
+    font-family: 'Oswald', sans-serif;
+  }
+
+}
+
+#contenido {
+  grid-area: contenido;
+  height: 100%;
+  padding: 0 20px;
+  overflow: scroll;
+  input[type=number] {
+    width: 80px;
+  }
+  .notice {
+    margin: 20px 0;
+  }
+  table {
+    .thead {
+      background-color: $fondoscuro;
+      color: $cfuenteclaro;
+      font-weight: bold;
+    }
+    img{
+      width: 100px !important;
+      height: 100px !important;
+    }
+  }
+  label {
+    width: 200px;
+  }
+
+}
+
+footer {
+  grid-area: foot;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  color: $cfuenteclaro;
+  background-color: $fondoscuro;
+  font-family: 'Bungee', cursive;
+}
+
+/* Clases Generales*/
+.centradovertical {
+  display: flex;
+  align-items: center;
+}
+
+.centradohorizontal {
+  display: flex;
+  justify-content: center;
+}
+
+.fullscreen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.navbar-nav > li{
+  padding-right: 20px ;
+}
